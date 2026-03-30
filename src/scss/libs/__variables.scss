@@ -1,0 +1,15 @@
+$color06: #fdfdfd;
+$color05: #f4f4f4;
+$color04: #dadada;
+$color03: #9c9c9c;
+$color02: #595959;
+$color01: #161616;
+$accent: #22a0bc;
+
+@font-face {
+  font-family: "Manrope";
+  src: url(/src/assets/fonts/Manrope-VariableFont_wght.ttf)
+    format("truetype-variations");
+  font-weight: 100 900;
+  font-style: normal;
+}
