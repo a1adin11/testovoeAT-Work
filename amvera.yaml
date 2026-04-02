@@ -1,12 +1,35 @@
 meta:
   environment: node
-  toolchain: npm
+  toolchain: yarn
   version: 1.0.0
 
 build:
-  buildCommand: npm ci && npm run build
+  buildCommand: |
+    echo "Installing dependencies..."
+    npm ci --legacy-peer-deps
+    echo "Building project..."
+    CI=false npm run build
+    echo "Build completed!"
   startCommand: npx serve -s build -l 3000
 
 env:
+  - name: NODE_ENV
+    value: production
+  - name: CI
+    value: "false"
   - name: PORT
-    value: 3000
+    value: "3000"
+
+deploy:
+  path: ./
+  include:
+    - build/
+    - package.json
+    - package-lock.json
+  exclude:
+    - node_modules/
+    - .git/
+    - .env
+    - .env.local
+    - src/
+    - public/
