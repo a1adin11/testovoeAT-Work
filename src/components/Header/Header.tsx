@@ -4,8 +4,8 @@ import styles from "./Header.module.scss";
 
 import logoIcon from "../../assets/img/logo.svg";
 import logoText from "../../assets/img/logoText.svg";
-import likeIcon from "../../assets/img/icons/Like.svg";
-import Notification from "../../assets/img/icons/Notification.svg";
+import likeIcon from "../../assets/img/icons/like.svg";
+import Notification from "../../assets/img/icons/notification.svg";
 import ProfileImg from "../../assets/img/profileImg.png";
 
 const Header = () => {
