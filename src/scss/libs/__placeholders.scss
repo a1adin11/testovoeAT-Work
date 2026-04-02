@@ -1,93 +1,98 @@
 @use "../libs/_variables" as v;
 
-%mainTitle {
-  color: v.$title-color;
-  font-family: "Cakra";
-  font-size: 64px;
+// Desktop title
+%DesktopTitle {
+  font-weight: 600;
+  font-size: 24px;
+  color: v.$color01;
 
-  @media screen and (max-width: 700px) {
-    font-size: 32px;
-  }
-}
-
-%subTitle {
-  color: v.$title-color;
-  font-family: "AA Stetica";
-  font-size: 32px;
-
-  @media screen and (max-width: 600px) {
-    font-size: 14px;
-  }
-}
-
-%midTitle {
-  color: v.$title-color;
-  font-family: "Cakra";
-  font-size: 48px;
-
-  @media screen and (max-width: 600px) {
+  @media screen and (max-width: 1000px) {
+    font-weight: 600;
     font-size: 24px;
+    color: v.$color01;
   }
 }
 
-%roundBtn {
-  width: 51px;
-  height: 51px;
-  border-radius: 50%;
-  background-color: v.$orange;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  cursor: pointer;
+%DesktopHeadline {
+  font-weight: 600;
+  font-size: 20px;
+  color: v.$color01;
 
   @media screen and (max-width: 1000px) {
-    width: 35px;
-    height: 35px;
+    font-weight: 600;
+    font-size: 18px;
+    color: v.$color01;
   }
 }
 
-%rootPage {
-  width: 100%;
-  padding: 80px 100px 260px;
-  height: fit-content;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
+%DesktopText11 {
+  font-weight: 600;
+  font-size: 18px;
+  color: v.$color01;
 
   @media screen and (max-width: 1000px) {
-    padding: 80px 20px 260px;
-
-    @media screen and (max-width: 700px) {
-      padding: 80px 20px;
-    }
+    font-weight: 600;
+    font-size: 16px;
+    color: v.$color01;
   }
 }
 
-%wrapperPage {
-  width: 100%;
-  max-width: 1240px;
-  height: fit-content;
+%DesktopText12 {
+  font-weight: 500;
+  font-size: 18px;
+  color: v.$color01;
+
+  @media screen and (max-width: 1000px) {
+    font-weight: 500;
+    font-size: 16px;
+    color: v.$color01;
+  }
 }
 
-%profileParagraph {
-  font-family: "AA Stetica";
-  font-style: normal;
+%DesktopText21 {
+  font-weight: 600;
+  font-size: 16px;
+  color: v.$color01;
+
+  @media screen and (max-width: 1000px) {
+    font-weight: 600;
+    font-size: 14px;
+    color: v.$color01;
+  }
+}
+
+%DesktopText22 {
   font-weight: 500;
   font-size: 16px;
-  color: v.$profile-text;
+  color: v.$color01;
+
+  @media screen and (max-width: 1000px) {
+    font-weight: 500;
+    font-size: 14px;
+    color: v.$color01;
+  }
 }
 
-%profileLightParagraph {
-  font-family: "AA Stetica";
-  font-style: normal;
+%DesktopCaption {
   font-weight: 500;
-  font-size: 15px;
-  line-height: 18px;
-  color: v.$profile-text;
+  font-size: 14px;
+  color: v.$color01;
+
+  @media screen and (max-width: 1000px) {
+    font-weight: 500;
+    font-size: 10px;
+    color: v.$color01;
+  }
 }
+
+//
 
 %widget {
-  border: 3px solid v.$ease-gray;
-  border-radius: 20px;
-  padding: 26px;
+  background-color: v.$color06;
+  border-radius: 16px;
+  padding: 40px;
+}
+
+%borderBottom {
+  border-bottom: solid 1px v.$color04;
 }

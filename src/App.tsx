@@ -3,27 +3,35 @@ import "../src/scss/App.scss";
 import { Route, Routes } from "react-router-dom";
 
 import Layout from "./components/Layout/Layout";
+import UsersPage from "./pages/usersPage/UsersPage";
+import EditUserPage from "./pages/editUserPage/EditUserPage";
+import { useInitUsers } from "./hooks/users/usersQuery";
 
 function App() {
-  return (
-    <div>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route path="/" element={<HomePage />} />
-          <Route path="/feeders" element={<FeedersPage />} />
-          <Route path="/feeders/feeder/:id" element={<CurrentFeederPage />} />
-          <Route path="/shelters" element={<SheltersPage />} />
-          <Route
-            path="/shelters/shelter/:id"
-            element={<CurrentShelterPage />}
-          />
-          <Route path="/map" element={<MapPage />} />
-          <Route path="/profile" element={<ProfilePage />} />
-          <Route path="/*" element={<NotFoundPage />} />
-        </Route>
-      </Routes>
-    </div>
-  );
+  const { isLoading, error } = useInitUsers();
+
+  if (isLoading) {
+    return <h1>Loading</h1>;
+  }
+
+  if (error) {
+    return <h1>Error</h1>;
+  }
+
+  if (!isLoading && !error) {
+    return (
+      <>
+        <Routes>
+          <Route path="/" element={<Layout />}>
+            <Route path="/" element={<UsersPage />} />
+            <Route path="/edit/:id" element={<EditUserPage />} />
+          </Route>
+        </Routes>
+      </>
+    );
+  }
+
+  return null;
 }
 
 export default App;

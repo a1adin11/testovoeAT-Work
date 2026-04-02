@@ -1,0 +1,107 @@
+@use "../../scss/libs/__variables" as v;
+@use "../../scss/libs/__placeholders" as p;
+
+.root {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 0px 20px 40px 20px;
+
+  .wrapper {
+    width: 100%;
+    max-width: 1160px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    .topControl {
+      width: 100%;
+      height: 68px;
+      display: flex;
+      flex-direction: row;
+
+      .prev {
+        height: 100%;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: flex-start;
+        gap: 8px;
+        cursor: pointer;
+      }
+    }
+
+    .content {
+      width: 100%;
+      display: flex;
+      flex-direction: row;
+      align-items: flex-start;
+      gap: 40px;
+
+      @media screen and (max-width: 740px) {
+        flex-direction: column;
+      }
+
+      .profile {
+        @extend %widget;
+        max-width: 360px;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 40px;
+
+        @media screen and (max-width: 740px) {
+          flex: 1;
+          max-width: 100%;
+        }
+
+        img {
+          width: 100%;
+          border-radius: 8px;
+          background-color: v.$color06;
+          object-fit: cover;
+          aspect-ratio: 2/3.5;
+        }
+
+        .profileMenu {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          gap: 24px;
+
+          .optionWrapper {
+            width: 100%;
+            padding: 0 0 12px 0;
+            @extend %borderBottom;
+
+            .option {
+              @extend %DesktopText21;
+              color: v.$color03;
+              cursor: pointer;
+            }
+
+            .activeOption {
+              color: v.$color01;
+            }
+          }
+        }
+      }
+
+      .form {
+        flex: 1;
+        width: 100%;
+        @extend %widget;
+
+        h2 {
+          @extend %borderBottom;
+          @extend %DesktopTitle;
+          padding: 0 0 16px 0;
+          width: 100%;
+          margin-bottom: 24px;
+        }
+      }
+    }
+  }
+}

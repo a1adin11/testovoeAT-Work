@@ -1,0 +1,80 @@
+@use "../../scss/libs/_variables" as v;
+@use "../../scss/libs/_placeholders";
+
+.root {
+  background-color: v.$color06;
+  width: 100%;
+  height: 56px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .wrapper {
+    width: 100%;
+    max-width: 1140px;
+    padding: 0 16px 0 16px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-between;
+
+    .logo {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 8px;
+    }
+
+    .options {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      gap: 20px;
+
+      .icons {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        justify-content: center;
+        gap: 4px;
+
+        button {
+          height: 24px;
+          background: none;
+          border: none;
+          cursor: pointer;
+
+          @media screen and (max-width: 600px) {
+            display: none;
+          }
+        }
+      }
+      .user {
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+        gap: 8px;
+
+        img {
+          width: 20px;
+          height: 20px;
+          border-radius: 50px;
+
+          @media screen and (max-width: 600px) {
+            width: 28px;
+            height: 28px;
+          }
+        }
+
+        span {
+          @extend %DesktopText22;
+          color: v.$color01;
+
+          @media screen and (max-width: 600px) {
+            display: none;
+          }
+        }
+      }
+    }
+  }
+}

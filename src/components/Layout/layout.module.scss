@@ -1,2 +1,7 @@
 @use "../../scss/libs/_variables" as v;
 
+.root {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
