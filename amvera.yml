@@ -1,0 +1,12 @@
+meta:
+  environment: node
+  toolchain: npm
+  version: 1.0.0
+
+build:
+  buildCommand: npm ci && npm run build
+  startCommand: npx serve -s build -l 3000
+
+env:
+  - name: PORT
+    value: 3000
