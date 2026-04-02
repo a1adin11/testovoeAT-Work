@@ -1,6 +1,6 @@
 import styles from "./EditUserPage.module.scss";
 
-import arrowImg from "../../assets/img/icons/arrow.svg";
+import arrowImg from "../../assets/img/icons/Arrow.svg";
 import profileImg from "../../assets/img/profileImg.png";
 import EditUserForm from "../../components/forms/EditUserForm/EditUserForm";
 
