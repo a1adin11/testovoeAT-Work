@@ -3,6 +3,8 @@ import { usersApi } from "../../api/usersApi";
 import { useUserStore } from "../../state/userStore";
 import { useEffect } from "react";
 
+import profileImg from "../../assets/img/profileImg.png";
+
 export function useInitUsers() {
   const { setUsers, setActiveUser } = useUserStore();
 
@@ -18,7 +20,7 @@ export function useInitUsers() {
         city: user.address.city,
         phone: user.phone,
         company: user.company.name,
-        imgUrl: "src/assets/img/profileImg.png",
+        imgUrl: profileImg,
       }));
     },
     gcTime: Infinity,
