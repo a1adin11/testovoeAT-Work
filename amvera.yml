@@ -2,10 +2,11 @@ meta:
   environment: node
   toolchain:
     name: browser
-    version: 24
+    version: 22
 
-build:
-  command: yarn && yarn build
-  directory: dists
+build: yarn && yarn build
+
+artifacts:
+  path: dist
 
 spa: true
