@@ -1,6 +1,6 @@
 import styles from "./SuccessModal.module.scss";
 
-import checkedBox from "../../../assets/img/icons/Checked-box.svg";
+import checkedBox from "../../../assets/img/Checked-box.svg";
 import type { FC } from "react";
 
 const SuccessModal: FC = () => {
