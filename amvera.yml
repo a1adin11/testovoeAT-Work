@@ -4,4 +4,8 @@ meta:
     name: browser
     version: 24
 
+build:
+  command: yarn && yarn build
+  directory: dists
+
 spa: true
