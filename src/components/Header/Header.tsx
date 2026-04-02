@@ -5,8 +5,8 @@ import styles from "./Header.module.scss";
 import logoIcon from "../../assets/img/logo.svg";
 import logoText from "../../assets/img/logoText.svg";
 import likeIcon from "../../assets/img/icons/like.svg";
-import Notification from "../../assets/img/icons/notification.svg";
-import ProfileImg from "../../assets/img/profileImg.png";
+import notification from "../../assets/img/icons/notification.svg";
+import profileImg from "../../assets/img/profileImg.png";
 
 const Header = () => {
   return (
@@ -24,11 +24,11 @@ const Header = () => {
               <img src={likeIcon} aria-hidden="true" />
             </button>
             <button type="button" aria-label="уведомления">
-              <img src={Notification} aria-hidden="true" />
+              <img src={notification} aria-hidden="true" />
             </button>
           </div>
           <div className={styles.user}>
-            <img src={ProfileImg} alt="иконка профиля" />
+            <img src={profileImg} alt="иконка профиля" />
             <span>Ivan1234</span>
           </div>
         </div>
