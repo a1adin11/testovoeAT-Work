@@ -11,7 +11,6 @@ interface IUserProps {
 }
 
 const InfoBlock: FC<IUserProps> = ({ title, items }) => {
-  console.log(items);
   const { archivedUsersIds } = useUserStore();
 
   return (

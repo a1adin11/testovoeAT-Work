@@ -25,13 +25,12 @@ const EditUserForm = () => {
       document.body.style.overflow = "auto";
     }
   };
+  
   const { users, updateUser } = useUserStore();
 
   const { id } = useParams();
 
   const currentUserData = users.find((user) => user.id === Number(id));
-
-  console.log(currentUserData);
 
   const {
     handleSubmit,
