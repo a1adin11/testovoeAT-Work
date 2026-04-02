@@ -2,11 +2,10 @@ meta:
   environment: node
   toolchain:
     name: browser
-    version: 22
-
-build: yarn && yarn build
-
-artifacts:
-  path: dist
-
+    version: "22"
+build:
+  additionalCommands: npm install && npm run build
+  artifacts:
+    dist/*: /
 spa: true
+run: {}
